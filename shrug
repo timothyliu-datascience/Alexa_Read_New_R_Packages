@@ -1,0 +1,72 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "new r. packages",
+            "intents": [
+                {
+                    "name": "GetRecentRPackagesIntent",
+                    "slots": [],
+                    "samples": [
+                        "a new R package",
+                        "an archive R Packages",
+                        "tell me what new R packages are on CRAN",
+                        "ask archive R packages what's new",
+                        "what's on archive R Packages",
+                        "ask archive R Packages to read recent R Packages",
+                        "open archive R Packages",
+                        "tell me about recent package from archive R Packages",
+                        "retrieve lastest R Packages"
+                    ]
+                },
+                {
+                    "name": "GetNextEventIntent",
+                    "slots": [],
+                    "samples": [
+                        "yes",
+                        "yup",
+                        "sure",
+                        "yes please"
+                    ]
+                },
+                {
+                    "name": "GetTrueNextEventIntent",
+                    "slots": [],
+                    "samples": [
+                        "next"
+                    ]
+                },
+                {
+                    "name": "GetNoIntent",
+                    "slots": [],
+                    "samples": [
+                        "no",
+                        "nope",
+                        "no thanks",
+                        "no thank you"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "please stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "please cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}
