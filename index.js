@@ -16,16 +16,6 @@ exports.handler = function (event, context) {
     try {
         console.log("event.session.application.applicationId=" + event.session.application.applicationId);
 
-        /**
-         * Uncomment this if statement and populate with your skill's application ID to
-         * prevent someone else from configuring a skill that sends requests to this function.
-         */
-
-       /* if (event.session.application.applicationId !== “xxxx”) {
-             context.fail("Invalid Application ID");
-        }*/
-
-
 
         if (event.session.new) {
             onSessionStarted({requestId: event.request.requestId}, event.session);
