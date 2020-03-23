@@ -1,0 +1,51 @@
+Intent Schema
+=============
+{
+  "intents": [
+    {
+      "intent": "GetRecentRPackagesIntent"
+    },
+    {
+      "intent": "GetNextEventIntent"
+    },
+    {
+      "intent": "GetTrueNextEventIntent"
+    },
+    {
+      "intent": "GetNoIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
+
+Sample Utterances
+=================
+GetRecentRPackagesIntent a new R package
+GetRecentRPackagesIntent an archive R Packages
+GetRecentRPackagesIntent tell me what new R packages are on CRAN
+GetRecentRPackagesIntent ask archive R packages what's new
+GetRecentRPackagesIntent what's on archive R Packages
+GetRecentRPackagesIntent ask archive R Packages to read recent R Packages
+GetRecentRPackagesIntent open archive R Packages
+GetRecentRPackagesIntent tell me about recent package from archive R Packages
+GetRecentRPackagesIntent retrieve lastest R Packages
+GetNextEventIntent yes
+GetNextEventIntent yup
+GetNextEventIntent sure
+GetNextEventIntent yes please
+GetNoIntent no
+GetNoIntent nope
+GetNoIntent no thanks
+GetNoIntent no thank you
+GetTrueNextEventIntent next
+AMAZON.StopIntent please stop
+AMAZON.CancelIntent please cancel
+
