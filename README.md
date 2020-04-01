@@ -4,6 +4,6 @@
 
 Code developed by Timothy (Suhai) Liu
 
-Skill description https://lnkd.in/gWZ9Me9
+Skill description:
 
-publication description Keeping up to date with the latest R packages from CRAN. It crawls the most recent R package descriptions from CRAN. See a short demo https://youtu.be/nQCjHOPFvwM 
+This skill allows you to keep up to date with the latest R packages from CRAN. It crawls the most recent R package descriptions from feed. See a short demo https://youtu.be/nQCjHOPFvwM 
