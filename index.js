@@ -1,8 +1,10 @@
 /**
  * By Timothy Liu 2017
  * Code to build an Alexa Skill to retrieve latest R pacakges info
- *
+ * Feedparser to crawl feed 'http://dirk.eddelbuettel.com/cranberries/index.rss'
+ * to get the meta data about the newly published R packages
  */
+
 var max_res =15;
 var url = 'http://dirk.eddelbuettel.com/cranberries/index.rss';
 
@@ -61,7 +63,7 @@ function onLaunch(launchRequest, session, callback) {
     console.log("onLaunch requestId=" + launchRequest.requestId +
         ", sessionId=" + session.sessionId);
 
-    // Dispatch to your skill's launch.
+    // Dispatch to skill's launch.
     getWelcomeResponse(callback);
 }
 
@@ -115,11 +117,9 @@ function onIntent(intentRequest, session, callback) {
 function onSessionEnded(sessionEndedRequest, session) {
     console.log("onSessionEnded requestId=" + sessionEndedRequest.requestId +
         ", sessionId=" + session.sessionId);
-    // Add cleanup logic here
 }
 
 // --------------- Functions that control the skill's behavior -----------------------
-
 function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
     var sessionAttributes = {};
@@ -131,7 +131,6 @@ function getWelcomeResponse(callback) {
     // understood, they will be prompted again with this text.
     var repromptText = "You can say things like, read most recent R packages from CRAN";
     var shouldEndSession = false;
-
 
     callback(sessionAttributes,
         buildSpeechletResponse(cardTitle, cardText, speechOutput, repromptText, shouldEndSession));
@@ -154,8 +153,6 @@ You can ask me to stop anytime. So, tell me What can I help you with?";
     var repromptText = "You can say things like, read most recent R packages from CRAN";
     var shouldEndSession = false;
 
-
-
     callback(sessionAttributes,
         buildSpeechletResponse(cardTitle, cardText, speechOutput, repromptText, shouldEndSession));
 }
@@ -172,7 +169,7 @@ function handleSessionEndRequest(callback) {
 }
 
 /**
- * Sets the color in the session and prepares the speech to reply to the user.
+ * Sets the session and prepares the speech to reply to the user.
  */
 
 function GetRecentPapersInSession(intent, session, callback) {
@@ -219,7 +216,6 @@ feedparser.on('error', function (error) {
 });
 
 
-
 function unEntity(str){
    return str.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 }
@@ -241,7 +237,6 @@ feedparser.on('readable', function () {
         abstract = parts[1];
     };
 
-
    abstract = abstract.replace(":", " ");
 if (abstract.indexOf(":") > -1) {
     var parts = abstract.split(":", 2);
@@ -257,7 +252,6 @@ var lastIndex = str.lastIndexOf(" ");
 
 str = str.substring(0, lastIndex);
 console.log(str)
-
 
    abstract = abstract.replace(/&amp/g);
    abstract = abstract.replace(/;br/g," ");
@@ -340,8 +334,6 @@ function GetNo(intent, session, callback) {
          buildSpeechletResponse(cardTitle,cardText, speechOutput, repromptText, shouldEndSession));
 
 }
-
-
 
 
 // --------------- Helpers that build all of the responses -----------------------
