@@ -1,4 +1,4 @@
-# New-R-Packages
+# Alexa Reads New R Packages
 
 "NewRPackages"​ (published on Amazon Echo Platform) - An Alexa Skill to read latest R packages description from RSS Feed
 
